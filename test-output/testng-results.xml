@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-01T21:46:36 MSK" name="Default suite" finished-at="2023-02-01T21:47:25 MSK" duration-ms="48359">
+    <groups>
+    </groups>
+    <test started-at="2023-02-01T21:46:36 MSK" name="Default test" finished-at="2023-02-01T21:47:25 MSK" duration-ms="48359">
+      <class name="selenium.tests.TestNGTask">
+        <test-method is-config="true" signature="BeforeClass()[pri:0, instance:selenium.tests.TestNGTask@54a7079e]" started-at="2023-02-01T21:46:36 MSK" name="BeforeClass" finished-at="2023-02-01T21:46:57 MSK" duration-ms="20684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method signature="selectCategory()[pri:0, instance:selenium.tests.TestNGTask@54a7079e]" started-at="2023-02-01T21:46:57 MSK" name="selectCategory" finished-at="2023-02-01T21:47:22 MSK" duration-ms="25307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectCategory -->
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:selenium.tests.TestNGTask@54a7079e]" started-at="2023-02-01T21:47:23 MSK" name="AfterClass" finished-at="2023-02-01T21:47:25 MSK" duration-ms="2136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+      </class> <!-- selenium.tests.TestNGTask -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
