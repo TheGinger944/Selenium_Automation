@@ -3,6 +3,9 @@ package selenium.tests;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+
+import static org.junit.Assert.assertTrue;
+
 import java.time.Duration;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -19,7 +22,7 @@ public class TestNGTask {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void BeforeClass() throws InterruptedException {
+	public void setUp() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.get("https://www.wildberries.by/");
 		driver.manage().window().maximize();
@@ -46,9 +49,8 @@ public class TestNGTask {
 			wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("div[data-ind='2']>div>div")));
 			try {
 				WebElement checkbox = driver.findElement(By.cssSelector("div[data-ind='2']>div>div"));
-				System.out.println("before click: " + checkbox.getAttribute("class"));
 				checkbox.click();
-				System.out.println("after click: " + checkbox.getAttribute("class"));
+				assertTrue(checkbox.getAttribute("class").contains("is-active"));
 			} 
 			catch (WebDriverException e) {
 				System.out.println("An exceptional case.");
@@ -58,16 +60,11 @@ public class TestNGTask {
 				System.out.println("WebDriver couldn’t locate the element");
 		}
 		Thread.sleep(5000);
-		if(driver.findElement(By.cssSelector(".chip[data-id='331']")).isDisplayed() == true) {
-			System.out.println("Tag \"Коврик комнатный\" is displayed.");
-		}
-		else {
-			System.out.println("Tag \"Коврик комнатный\" is not displayed.");
-		}
-	}
+		assertTrue(driver.findElement(By.cssSelector(".chip[data-id='331']")).isDisplayed());
+}
 	
 	@AfterTest
-	public void AfterClass() {
+	public void terminate() {
 		driver.quit();
 	}
 }

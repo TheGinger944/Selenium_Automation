@@ -1,0 +1,5 @@
+/selenium/tests/JUnitTask.class
+/selenium/tests/PressButtonTest.class
+/selenium/tests/TestNGTask.class
+/.settings/*
+/chromedriver.exe
