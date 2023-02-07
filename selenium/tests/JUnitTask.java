@@ -19,7 +19,7 @@ public class JUnitTask {
 	WebDriver driver;
 	
 	@Before
-	public void BeforeScr() throws InterruptedException {
+	public void setUp() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.get("https://www.wildberries.by/");
 		driver.manage().window().maximize();
@@ -60,7 +60,7 @@ public class JUnitTask {
 }
 	
 	@After
-	public void AfterScr() {
+	public void terminate() {
 		driver.quit();
 	}
 }

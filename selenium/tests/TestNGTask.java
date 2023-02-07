@@ -22,7 +22,7 @@ public class TestNGTask {
 	WebDriver driver;
 	
 	@BeforeTest
-	public void BeforeClass() throws InterruptedException {
+	public void setUp() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.get("https://www.wildberries.by/");
 		driver.manage().window().maximize();
@@ -64,7 +64,7 @@ public class TestNGTask {
 }
 	
 	@AfterTest
-	public void AfterClass() {
+	public void terminate() {
 		driver.quit();
 	}
 }
